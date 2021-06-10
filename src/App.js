@@ -161,6 +161,22 @@ class App extends Component {
               />
             </Col>
           </Row>
+          <a
+            href="https://github.com/brunommbruno/relaxme"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://image.flaticon.com/icons/png/512/25/25231.png"
+              style={{
+                height: "2.6rem",
+                position: "absolute",
+                bottom: 10,
+                right: 15,
+              }}
+              alt="github logo"
+            />
+          </a>
         </Container>
       </div>
     );
