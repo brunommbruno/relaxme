@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import PlayButton from "./components/PlayButton";
 import ThemeButton from "./components/ThemeButton";
 
 import rainIcon from "./icons/rain.svg";
@@ -48,7 +49,7 @@ class App extends Component {
               <p>timer</p>
             </Col>
             <Col>
-              <p>play</p>
+              <PlayButton />
             </Col>
             <Col>
               <ThemeButton

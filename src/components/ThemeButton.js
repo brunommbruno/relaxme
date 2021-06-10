@@ -9,6 +9,7 @@ class ThemeButton extends Component {
       >
         <img
           src={this.props.icon}
+          alt="theme icon"
           style={{
             backgroundColor: this.props.color,
             border:

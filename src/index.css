@@ -17,7 +17,7 @@ code {
 }
 
 .app {
-  padding-top: 30vh;
+  padding-top: 25vh;
 }
 
 .theme-button img {
@@ -30,5 +30,15 @@ code {
 
 .theme-button img:hover {
   padding: 1.3rem;
+  cursor: pointer;
+}
+
+.play-button img {
+  height: 8rem;
+  margin-top: 3rem;
+}
+
+.play-button img:hover {
+  padding: 0.4rem;
   cursor: pointer;
 }
