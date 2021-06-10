@@ -9,15 +9,20 @@ import rainIcon from "./icons/rain.svg";
 import waveIcon from "./icons/wave.svg";
 import fireIcon from "./icons/fire.svg";
 
+import waveSound from "./sounds/wave-sound.mp3";
+
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       theme: "beach",
+      audio: new Audio(waveSound),
+      isPlaying: false,
     };
 
     this.handleTheme = this.handleTheme.bind(this);
+    this.playPause = this.playPause.bind(this);
   }
 
   handleTheme(theme) {
@@ -25,6 +30,18 @@ class App extends Component {
       theme: theme,
     });
   }
+
+  playPause = () => {
+    const isPlaying = this.state.isPlaying;
+
+    if (isPlaying) {
+      this.state.audio.pause();
+    } else {
+      this.state.audio.play();
+    }
+
+    this.setState({ isPlaying: !isPlaying });
+  };
 
   render() {
     return (
@@ -49,7 +66,10 @@ class App extends Component {
               <p>timer</p>
             </Col>
             <Col>
-              <PlayButton />
+              <PlayButton
+                playPause={this.playPause}
+                isPlaying={this.state.isPlaying}
+              />
             </Col>
             <Col>
               <ThemeButton
