@@ -14,7 +14,7 @@ class ThemeButton extends Component {
             backgroundColor: this.props.color,
             border:
               this.props.currentTheme === this.props.theme
-                ? "2px solid grey"
+                ? "2px solid white"
                 : "2px solid transparent",
           }}
         />
