@@ -15,3 +15,15 @@ code {
 .app .col {
   text-align: center;
 }
+
+.app {
+  padding-top: 30vh;
+}
+
+.theme-button img {
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}

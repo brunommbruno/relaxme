@@ -2,6 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import ThemeButton from "./components/ThemeButton";
+
+import rainIcon from "./icons/rain.svg";
+import waveIcon from "./icons/wave.svg";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +40,8 @@ class App extends Component {
               <p>play</p>
             </Col>
             <Col>
-              <p>sound choose</p>
+              <ThemeButton icon={waveIcon} color="lightblue" />
+              <ThemeButton icon={rainIcon} color="lightgreen" />
             </Col>
           </Row>
         </Container>
