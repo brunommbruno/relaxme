@@ -20,6 +20,13 @@ import forestSound from "./sounds/forest-sound.mp3";
 import jazzSound from "./sounds/jazz.mp3";
 import citySound from "./sounds/city-sound.mp3";
 
+import forestTheme from "./themes/forest-theme.webp";
+import beachTheme from "./themes/beach-theme.webp";
+import fireTheme from "./themes/fire-theme.webp";
+import jazzTheme from "./themes/jazz-theme.webp";
+import rainTheme from "./themes/rain-theme.webp";
+import cityTheme from "./themes/city-theme.webp";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -83,17 +90,17 @@ class App extends Component {
         style={{
           backgroundImage:
             this.state.theme === "beach"
-              ? "url(https://wallpaperaccess.com/full/3085648.jpg)"
+              ? `url(${beachTheme})`
               : this.state.theme === "rain"
-              ? "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"
+              ? `url(${rainTheme})`
               : this.state.theme === "fire"
-              ? "url(https://images.unsplash.com/photo-1599394021099-0da61a5e1ff2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"
+              ? `url(${fireTheme})`
               : this.state.theme === "forest"
-              ? "url(https://images.pexels.com/photos/355321/pexels-photo-355321.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)"
+              ? `url(${forestTheme})`
               : this.state.theme === "jazz"
-              ? "url(https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80)"
+              ? `url(${jazzTheme})`
               : this.state.theme === "city"
-              ? "url(https://images.unsplash.com/photo-1530116896371-d180a0f9d307?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"
+              ? `url(${cityTheme})`
               : null,
           backgroundSize: "100%",
           height: "100vh",
