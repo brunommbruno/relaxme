@@ -10,6 +10,8 @@ import waveIcon from "./icons/wave.svg";
 import fireIcon from "./icons/fire.svg";
 
 import beachSound from "./sounds/beach-sound.mp3";
+import rainSound from "./sounds/rain-sound.mp3";
+import fireSound from "./sounds/fire-sound.mp3";
 
 class App extends Component {
   constructor(props) {
@@ -26,8 +28,23 @@ class App extends Component {
   }
 
   handleTheme(theme) {
+    this.state.audio.pause();
+    this.setState({
+      isPlaying: false,
+    });
+
+    let audio;
+    if (theme === "beach") {
+      audio = beachSound;
+    } else if (theme === "rain") {
+      audio = rainSound;
+    } else if (theme === "fire") {
+      audio = fireSound;
+    }
+
     this.setState({
       theme: theme,
+      audio: new Audio(audio),
     });
   }
 
