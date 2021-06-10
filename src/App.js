@@ -14,6 +14,14 @@ class App extends Component {
     this.state = {
       theme: "beach",
     };
+
+    this.handleTheme = this.handleTheme.bind(this);
+  }
+
+  handleTheme(theme) {
+    this.setState({
+      theme: theme,
+    });
   }
 
   render() {
@@ -40,8 +48,20 @@ class App extends Component {
               <p>play</p>
             </Col>
             <Col>
-              <ThemeButton icon={waveIcon} color="lightblue" />
-              <ThemeButton icon={rainIcon} color="lightgreen" />
+              <ThemeButton
+                icon={waveIcon}
+                color="lightblue"
+                handleTheme={this.handleTheme}
+                theme="beach"
+                currentTheme={this.state.theme}
+              />
+              <ThemeButton
+                icon={rainIcon}
+                color="lightgreen"
+                handleTheme={this.handleTheme}
+                theme="rain"
+                currentTheme={this.state.theme}
+              />
             </Col>
           </Row>
         </Container>

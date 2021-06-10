@@ -25,5 +25,10 @@ code {
   padding: 1rem;
   border-radius: 1.8rem;
   margin-bottom: 1.5rem;
-  color: white;
+  border: 2px solid transparent;
+}
+
+.theme-button img:hover {
+  padding: 1.3rem;
+  cursor: pointer;
 }
