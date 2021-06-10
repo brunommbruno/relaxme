@@ -9,7 +9,7 @@ import rainIcon from "./icons/rain.svg";
 import waveIcon from "./icons/wave.svg";
 import fireIcon from "./icons/fire.svg";
 
-import waveSound from "./sounds/wave-sound.mp3";
+import beachSound from "./sounds/beach-sound.mp3";
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class App extends Component {
 
     this.state = {
       theme: "beach",
-      audio: new Audio(waveSound),
+      audio: new Audio(beachSound),
       isPlaying: false,
     };
 
