@@ -31,6 +31,8 @@ class App extends Component {
       time: new Date(),
     };
 
+    this.state.audio.loop = true;
+
     this.handleTheme = this.handleTheme.bind(this);
     this.playPause = this.playPause.bind(this);
   }
